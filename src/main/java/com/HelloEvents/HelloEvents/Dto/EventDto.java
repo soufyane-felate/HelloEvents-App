@@ -1,4 +1,4 @@
-package Dto;
+package com.HelloEvents.HelloEvents.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

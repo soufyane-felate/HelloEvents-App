@@ -1,4 +1,4 @@
-package model;
+package com.HelloEvents.HelloEvents.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,12 +13,14 @@ import lombok.Setter;
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long idreservation;
     @ManyToOne
     private Client client;
 
+
+
     @ManyToOne
+    @JoinColumn(name = "eventId")
     private Evenement evenement;
 
 

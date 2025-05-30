@@ -1,8 +1,8 @@
-package Mapper;
+package com.HelloEvents.HelloEvents.Mapper;
 
 
-import Dto.ReservatioDto;
-import model.Reservation;
+import com.HelloEvents.HelloEvents.Dto.ReservatioDto;
+import com.HelloEvents.HelloEvents.model.Reservation;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -14,5 +14,5 @@ public interface ReservationMapper {
     ReservatioDto reservationToDto(Reservation reservation);
     Reservation DtoToReservation(ReservatioDto dto);
 
-
+   Reservation reservationDtoToDto(Reservation reservation);
 }

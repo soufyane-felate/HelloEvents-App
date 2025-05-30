@@ -1,8 +1,8 @@
-package Controller;
+package com.HelloEvents.HelloEvents.Controller;
 
 
-import Dto.EventDto;
-import Services.EventService;
+import com.HelloEvents.HelloEvents.Dto.EventDto;
+import com.HelloEvents.HelloEvents.Services.EventService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,28 +10,29 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("api/event")
 public class EventController {
 
     public EventService eventService;
 
-    @PostMapping("/addEvent")
+    @PostMapping
     public EventDto addEvent(@RequestBody EventDto eventDto) {
         return eventService.AddEvent(eventDto);
     }
-    @GetMapping("/allEvents")
+    @GetMapping
     public List<EventDto> getAllEvents(){
         return eventService.getAllEvents();
     }
-    @GetMapping("/event/{id}")
+    @GetMapping("/{id}")
     public EventDto getEventById(@PathVariable Long id ) {
         return  eventService.getEventById(id);
     }
-    @PutMapping("/event/{id}")
+    @PutMapping("/{id}")
     public EventDto updatEvent(@PathVariable Long id ,@RequestBody EventDto eventDto) {
         return eventService.updateEvent(id,eventDto);
     }
 
-    @DeleteMapping("/event/{id}")
+    @DeleteMapping("/{id}")
     public void deleteEvent(@PathVariable Long id ) {
         eventService.deleteEvent(id);
     }

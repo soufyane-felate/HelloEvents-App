@@ -1,13 +1,15 @@
-package Services;
+package com.HelloEvents.HelloEvents.Services;
 
 
-import Dto.ReservatioDto;
-import Mapper.ReservationMapper;
-import Repository.ClientRepository;
-import Repository.EventRepository;
-import Repository.ReservationRepository;
+import com.HelloEvents.HelloEvents.Dto.ClientDto;
+import com.HelloEvents.HelloEvents.Dto.ReservatioDto;
+import com.HelloEvents.HelloEvents.Mapper.ReservationMapper;
+import com.HelloEvents.HelloEvents.Repository.ClientRepository;
+import com.HelloEvents.HelloEvents.Repository.EventRepository;
+import com.HelloEvents.HelloEvents.Repository.ReservationRepository;
+import com.HelloEvents.HelloEvents.model.Client;
 import lombok.AllArgsConstructor;
-import model.Reservation;
+import com.HelloEvents.HelloEvents.model.Reservation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,5 +47,11 @@ public class ResrvationService {
     }
 
 
+    //
+
+    public List<ReservatioDto> getReservationByEvent(Long idEvent){
+        return reservationRepository.getReservationsByEvenement_IdEvent(idEvent)
+                .stream().map(res->reservationMapper.reservationToDto(res)).toList();
+    }
 
 }

@@ -1,8 +1,8 @@
-package Mapper;
+package com.HelloEvents.HelloEvents.Mapper;
 
 
-import Dto.EventDto;
-import model.Evenement;
+import com.HelloEvents.HelloEvents.Dto.EventDto;
+import com.HelloEvents.HelloEvents.model.Evenement;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 

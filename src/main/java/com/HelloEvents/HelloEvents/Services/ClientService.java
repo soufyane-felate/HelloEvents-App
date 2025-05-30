@@ -1,14 +1,15 @@
-package Services;
+package com.HelloEvents.HelloEvents.Services;
 
 
-import Dto.ClientDto;
-import Mapper.ClientMapper;
-import Repository.ClientRepository;
-import model.Client;
+import com.HelloEvents.HelloEvents.Dto.ClientDto;
+import com.HelloEvents.HelloEvents.Mapper.ClientMapper;
+import com.HelloEvents.HelloEvents.Repository.ClientRepository;
+import com.HelloEvents.HelloEvents.model.Client;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ClientService {
@@ -50,4 +51,7 @@ public class ClientService {
     public void deleteClient(Long id){
          clientRepository.deleteById(id);
     }
+
+
+
 }

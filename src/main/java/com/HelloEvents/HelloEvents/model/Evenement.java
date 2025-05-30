@@ -1,4 +1,4 @@
-package model;
+package com.HelloEvents.HelloEvents.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

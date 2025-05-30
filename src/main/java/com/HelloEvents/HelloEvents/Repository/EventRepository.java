@@ -1,8 +1,8 @@
-package Repository;
+package com.HelloEvents.HelloEvents.Repository;
 
 
-import Dto.Result;
-import model.Evenement;
+import com.HelloEvents.HelloEvents.Dto.Result;
+import com.HelloEvents.HelloEvents.model.Evenement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
